@@ -31,8 +31,8 @@
 			<checksum>https://raw.githubusercontent.com/noobsandnerds/modules4all/master/zips/addons.xml.md5</checksum>
 			<datadir zip="true">https://raw.githubusercontent.com/noobsandnerds/modules4all/master/zips/</datadir>
 		</dir>
-		<info compressed="false">https://raw.githubusercontent.com/todayismyluckyday8/repository.doge/master/zips/addons.xml</info>
-		<checksum>https://raw.githubusercontent.com/todayismyluckyday8/repository.doge/master/zips/addons.xml.md5</checksum>
+		<info compressed="false">https://raw.githubusercontent.com/todayismyluckyday/repository.doge/master/zips/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/todayismyluckyday/repository.doge/master/zips/addons.xml.md5</checksum>
 		<datadir zip="true">https://raw.githubusercontent.com/Shanpython/repository.houseofblue/master/zips/</datadir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
