@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.video.doge" name="Doge" version="1.2" provider-name="Doge">
+<addon id="plugin.video.doge" name="Doge" version="1.3" provider-name="Doge">
     <requires>
         <import addon="xbmc.python" version="2.19.0" />
-        <import addon="script.module.nanscrapers" version="0.5.5" />
+        <import addon="script.module.universalscrapers" version="0.5.5" />
         <import addon="script.module.python.koding.aio" version="0.9.6.6" />
         <import addon="script.module.beautifulsoup" version="3.2.1" />
         <import addon="script.module.requests" version="2.9.1" />
         <import addon="script.module.addon.common" version="2.0.0" />
         <import addon="script.module.xmltodict" version="0.9.0" />
         <!--<import addon="script.module.web-pdb" version="1.0"/>-->
-        <import addon="script.module.urlresolver" version="1.2.0" />
+        <import addon="script.module.resolveurl" />
     </requires>
     <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>audio video</provides>
@@ -56,13 +56,13 @@
   </extension>
 </addon>
 
-<addon id="repository.doge" name="Doge" version="0.0.2" provider-name="Doge">
+<addon id="repository.doge" name="Doge" version="0.0.3" provider-name="Doge">
 	<extension point="xbmc.addon.repository" name="Doge Repository">
 		<dir>
-			<info compressed="false">https://raw.githubusercontent.com/noobsandnerds/modules4all/master/zips/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/noobsandnerds/modules4all/master/zips/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/noobsandnerds/modules4all/master/zips/</datadir>
-		</dir>
+  <info compressed="false">http://teamuniversal.xyz/modules4all/addons.xml</info>
+  <checksum>http://teamuniversal.xyz/modules4all/addons.xml.md5</checksum>
+  <datadir zip="true">http://teamuniversal.xyz/modules4all/</datadir>
+ </dir>
 		<info compressed="false">https://raw.githubusercontent.com/todayismyluckyday/repository.doge/master/zips/addons.xml</info>
 		<checksum>https://raw.githubusercontent.com/todayismyluckyday/repository.doge/master/zips/addons.xml.md5</checksum>
 		<datadir zip="true">https://raw.githubusercontent.com/todayismyluckyday/repository.doge/master/zips/</datadir>

@@ -1,6 +1,6 @@
 """
     trakt.py --- Jen Plugin for accessing trakt data
-    Copyright (C) 2017, Midraal
+    Copyright (C) 2017, Jen
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -93,6 +93,7 @@ import pickle
 import time
 import urlparse
 import urllib
+import base64
 
 import requests
 
@@ -108,7 +109,7 @@ from resources.lib.util.xml import JenItem, JenList, display_list
 from unidecode import unidecode
 
 CACHE_TIME = 3600  # change to wanted cache time in seconds
-CACHE_TMDB_TIME = 3600 * 24 * 30
+CACHE_TMDB_TIME = 3600 * 24 * 360
 SKIP_TMDB_INFO = False
 
 TRAKT_API_KEY = __builtin__.trakt_client_id
@@ -728,8 +729,8 @@ def save_to_db(item, url):
     if not item or not url:
         return False
     if type(item) == tuple:
-        item = item[0]
         content_type = item[1]
+        item = item[0]
     else:
         content_type = None
     item = remove_non_ascii(item)
@@ -738,7 +739,7 @@ def save_to_db(item, url):
 
     koding.Add_To_Table("trakt_plugin", {
         "url": url,
-        "item": pickle.dumps(item).replace("\"", "'"),
+        "item": base64.b64encode(pickle.dumps(item)),
         "content_type": content_type,
         "created": time.time()
     })
@@ -767,25 +768,22 @@ def fetch_from_db(url):
         if "tmdb" in url:
             if created_time and float(
                     created_time) + CACHE_TMDB_TIME >= time.time():
-                match_item = match["item"].replace("'", "\"")
+                match_item = match["item"]
                 try:
-                    match_item = match_item.encode('ascii', 'ignore')
+                    result = pickle.loads(base64.b64decode(match_item))
                 except:
-                    match_item = match_item.decode('utf-8').encode(
-                        'ascii', 'ignore')
-                result = pickle.loads(match_item)
+                    return None
                 if type(result) == str and result.startswith("{"):
                     result = eval(result)
                 return result
         if created_time and float(created_time) + float(CACHE_TIME) >= time.time():
-            match_item = match["item"].replace("'", "\"")
-            content_type = match["content_type"]
+            match_item = match["item"]
             try:
-                match_item = match_item.encode('ascii', 'ignore')
+                content_type = match["content_type"]
+                result = pickle.loads(base64.b64decode(match_item))
             except:
-                match_item = match_item.decode('utf-8').encode(
-                    'ascii', 'ignore')
-            return (pickle.loads(match_item), content_type)
+                return None
+            return (result, content_type)
         else:
             return []
     else:

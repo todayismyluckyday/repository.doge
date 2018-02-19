@@ -1,5 +1,21 @@
 """
-    
+    tmdb.py --- Jen Plugin for accessing tmdb data
+    Copyright (C) 2017, Jen
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
     Usage Examples:
     Returns The TMDB Popular Movies List
     <dir>
@@ -137,6 +153,7 @@
 
 import __builtin__
 import pickle
+import base64
 import time
 
 import koding
@@ -149,7 +166,7 @@ from resources.lib.util.xml import JenItem, JenList, display_list
 from unidecode import unidecode
 
 
-CACHE_TIME = 0  # change to wanted cache time in seconds
+CACHE_TIME = 3600  # change to wanted cache time in seconds
 
 addon_fanart = xbmcaddon.Addon().getAddonInfo('fanart')
 addon_icon = xbmcaddon.Addon().getAddonInfo('icon')
@@ -494,7 +511,7 @@ def tmdb(url):
                                              person_id,
                                              thumbnail)
 
-        if page < response.get("total_pages", 0):
+        if response and page < response.get("total_pages", 0):
             base = url.split("/")
             if base[-1].isdigit():
                 base = base[:-1]
@@ -787,7 +804,7 @@ def save_to_db(item, url):
     koding.Add_To_Table("tmdb_plugin",
                         {
                             "url": url,
-                            "item": pickle.dumps(item).replace("\"", "'"),
+                            "item": base64.b64encode(pickle.dumps(item)),
                             "created": time.time()
                         })
 
@@ -813,12 +830,12 @@ def fetch_from_db(url):
             return None
         created_time = match["created"]
         if created_time and float(created_time) + CACHE_TIME >= time.time():
-            match_item = match["item"].replace("'", "\"")
+            match_item = match["item"]
             try:
-                match_item = match_item.encode('ascii', 'ignore')
+                    result = pickle.loads(base64.b64decode(match_item))
             except:
-                match_item = match_item.decode('utf-8').encode('ascii', 'ignore')
-            return pickle.loads(match_item)
+                    return None
+            return result
         else:
             return []
     else:

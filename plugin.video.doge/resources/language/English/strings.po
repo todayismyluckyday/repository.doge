@@ -1,6 +1,6 @@
-# Addon Name: Flix
-# Addon id: plugin.video.flix
-# Addon Provider: Team Jen
+# Addon Name: Doge
+# Addon id: plugin.video.doge
+# Addon Provider: Doge
 msgid ""
 msgstr ""
 "Project-Id-Version: Jen\n"
@@ -684,7 +684,7 @@ msgid "Please Wait"
 msgstr ""
 
 msgctxt "#30033"
-msgid "Please wait"
+msgid "Processing Link"
 msgstr ""
 
 msgctxt "#30034"
@@ -780,7 +780,7 @@ msgid "Queue Item"
 msgstr ""
 
 msgctxt "#30057"
-msgid "We're working on it! Hang tight amigo.."
+msgid "processing metadata"
 msgstr ""
 
 msgctxt "#30058"
