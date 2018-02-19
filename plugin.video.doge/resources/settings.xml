@@ -11,7 +11,7 @@
                id="language_id" default="system"/>
       <setting label="32507" type="lsep"/>
       <setting label="30717" type="bool" id="metadata" default="true"/>
-      <setting label="Disable metadata Dialog" type="bool" id="disable_metadata_dialog" default="false"/>
+      <setting label="Disable metadata Dialog" type="bool" id="disable_metadata_dialog" default="true"/>
       <setting label="32508" type="select" values="Trakt|TMDB" id="movie_metadata_provider" default="Trakt"/>
       <setting label="32509" type="select" values="Trakt|TVDB" id="tv_metadata_provider" default="Trakt"/>
       <setting label="32510" type="lsep"/>
@@ -64,7 +64,7 @@
       <setting id="first_run" label="first run" type="bool" default="false" visible="false"/>
       <setting label="Cache Location" id="cache_folder" type="folder" default="special://profile/addon_data/plugin.video.doge/"/>
       <setting label="TVDb api key" type="text" id="0629B785CE550C8D" option="hidden" default="" visible="eq(-3,true)"/>
-      <setting label="TMDb api key" type="text" id="66e34e89e655538fecd4aca6dc820141" option="hidden" default="" visible="eq(-4,true)"/>
+      <setting label="TMDb api key" type="text" id="a393c171549374752a526a8995949bb5" option="hidden" default="" visible="eq(-4,true)"/>
       <setting label="Trakt client id" type="text" id="948c4e2514db4f2cca33e737f5e73ae213e537d344b9916983e53e3cc2a1b21c" option="hidden" default="" visible="eq(-5,true)"/>
       <setting label="Trakt client secret" type="text" id="140369c2c981732a7b183db2e9300065629b8b7417a149a0c4e098ebee8f692e" option="hidden" visible="!eq(-1,8b3c509d7ae20fb31efcf95a7f030da562c37a8f0d9cd100db6ac1a41970f8ac) + eq(-6,true)" default=""/>
       <setting label="Last.fm api key" type="text" id="lastfm_api_key" option="hidden" default="" visible="eq(-7,true)"/>
