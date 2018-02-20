@@ -23,7 +23,7 @@ import __builtin__
 # change these to suit your addons
 root_xml_url = "http://xxe.press/brickemgoodsoisay/main.xml"  # url of the root xml file
 __builtin__.tvdb_api_key = "0629B785CE550C8D"  # tvdb api key
-__builtin__.tmdb_api_key = "a393c171549374752a526a8995949bb5"  # tmdb api key
+__builtin__.tmdb_api_key = "256adc186cfd7f0177fb416f33ac5ea3"  # tmdb api key
 __builtin__.trakt_client_id = "948c4e2514db4f2cca33e737f5e73ae213e537d344b9916983e53e3cc2a1b21c"  # trakt client id
 __builtin__.trakt_client_secret = "140369c2c981732a7b183db2e9300065629b8b7417a149a0c4e098ebee8f692e"  # trakt client secret
 __builtin__.search_db_location = ""  # location of search db
