@@ -56,7 +56,7 @@
   </extension>
 </addon>
 
-<addon id="repository.doge" name="Doge" version="0.0.3" provider-name="Doge">
+<addon id="repository.doge" name="Doge" version="0.0.4" provider-name="Doge">
 	<extension point="xbmc.addon.repository" name="Doge Repository">
 		<dir>
   <info compressed="false">http://teamuniversal.xyz/modules4all/addons.xml</info>
