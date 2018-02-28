@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
+<addon id="plugin.program.dogewizard" name="[B][COLORcyan]D[COLORgrey]oge [COLORcyan]W[COLORgrey]izard[/COLOR][/B]" version="1.1.4" provider-name="doge">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="" start="startup" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Doge-Wizard</summary>
+    <description lang="en">Wow, it's doge!</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="plugin.video.doge" name="Doge" version="1.5" provider-name="Doge">
     <requires>
         <import addon="xbmc.python" version="2.19.0" />
@@ -11,6 +26,7 @@
         <import addon="script.module.xmltodict" version="0.9.0" />
         <!--<import addon="script.module.web-pdb" version="1.0"/>-->
         <import addon="script.module.resolveurl" />
+		<import addon="plugin.program.dogewizard" />
     </requires>
     <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>audio video</provides>
