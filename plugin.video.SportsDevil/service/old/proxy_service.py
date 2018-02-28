@@ -204,7 +204,8 @@ class MyHandler(BaseHTTPRequestHandler):
     def serveFile(self, fURL, sendData):        
 
         session = livestreamer.session.Livestreamer()
-        #session.set_loglevel("debug")
+        session.set_loglevel("debug")
+        session.set_logoutput(sys.stdout)
 
         if _dec:
             livestreamer.stream.hls.HLSStreamWriter.create_decryptor = create_decryptor
@@ -216,13 +217,15 @@ class MyHandler(BaseHTTPRequestHandler):
                 headers = dict(urlparse.parse_qsl(sp[1]))                
                 session.set_option("http-ssl-verify", False)
                 session.set_option("hls-segment-threads", 1)
+
                 if 'zoomtv' in headers['Referer']:
                     session.set_option("zoom-key", headers['Referer'].split('?')[1])                    
                 elif 'zuom' in headers['Referer']:
                     session.set_option("zuom-key", headers['Referer'].split('?')[1])
-                elif 'livecam' in headers['Referer'] or 'emty.space' in headers['Referer']:
+                elif 'livecamtv' in headers['Referer'] or 'emty.space' in headers['Referer'] or 'realtimetv' in headers['Referer']:
                     session.set_option("livecam-key", headers['Referer'])
-                    headers.pop('Referer')
+                    
+                    #headers.pop('Referer')
                 elif 'sawlive' in headers['Referer']:
                     session.set_option("saw-key", headers['Referer'])
                 elif 'yoursportsinhd' in headers['Referer']:
