@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addons>
+<addon id="plugin.video.doge" name="Doge" version="1.5" provider-name="Doge">
+    <requires>
+        <import addon="xbmc.python" version="2.19.0" />
+        <import addon="script.module.universalscrapers" version="1.0.0" />
+        <import addon="script.module.python.koding.aio" version="0.9.6.6" />
+        <import addon="script.module.beautifulsoup" version="3.2.1" />
+        <import addon="script.module.requests" version="2.9.1" />
+        <import addon="script.module.addon.common" version="2.0.0" />
+        <import addon="script.module.xmltodict" version="0.9.0" />
+        <!--<import addon="script.module.web-pdb" version="1.0"/>-->
+        <import addon="script.module.resolveurl" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>audio video</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py" start="[login|startup]" />
+    <extension point="xbmc.addon.metadata">
+      <summary lang="en">Good doge</summary>
+      <description lang="en">Wow, its doge!</description>
+      <disclaimer lang="en">The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+      <platform>all</platform>
+    </extension>
+</addon>
+
+<addon
+  id="plugin.video.SportsDevil"
+  version="2018.01.07"
+  name="SportsDevil"
+  provider-name="SportsDevil">
+  <requires>
+   <import addon="xbmc.python" version="2.14.0"/>
+   <import addon="script.module.dateutil" />
+   <import addon="script.module.simplejson" />
+   <import addon="script.module.six" />
+   <import addon="script.module.requests" />
+   <import addon="script.module.livestreamer" />
+   <!-- <import addon="script.video.F4mProxy" /> -->
+   <!-- <import addon="plugin.video.f4mTester" /> -->
+  </requires>
+  <extension
+    point="xbmc.python.pluginsource"
+    library="default.py">
+   <provides>video</provides>
+  </extension>
+  <extension point="xbmc.service" library="service/proxy_service.py" start="startup" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">SportsDevil addon</summary>
+    <description lang="en">Play videos of different ad-financed sports streaming sites.</description>
+    <description lang="he">נגן סרטונים של אתרי ספורט שונים הממומנים על ידי מודעות.</description>
+    <disclaimer lang="en">SportsDevil does not provide any streams of its own; stream quality, content and copyright are responsibility of the ad-financed source web site. For updates - check the readme.</disclaimer>
+    <disclaimer lang="he">SportsDevil אינו מספק שום הזרמה; איכות הזרם, התוכן וזכויות היוצרים הם באחריות אתר האינטרנט הממומן על ידי המודעה. לעדכונים בדוק את קובץ readme</disclaimer>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="repository.doge" name="Doge" version="0.0.5" provider-name="Doge">
+	<extension point="xbmc.addon.repository" name="Doge Repository">
+		<dir>
+			<info compressed="false">http://teamuniversal.xyz/modules4all/addons.xml</info>
+			<checksum>http://teamuniversal.xyz/modules4all/addons.xml.md5</checksum>
+			<datadir zip="true">http://teamuniversal.xyz/modules4all/</datadir>
+		</dir>
+		<dir>
+			<info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
+		</dir>
+		<info compressed="false">https://raw.githubusercontent.com/todayismyluckyday/repository.doge/master/zips/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/todayismyluckyday/repository.doge/master/zips/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/todayismyluckyday/repository.doge/master/zips/</datadir>
+		</dir>
+		<dir>
+			<info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
+		</dir>
+		<dir>
+			<info compressed="false">http://bigyidbuilds.com/plugins/addons.xml</info>
+			<checksum>http://bigyidbuilds.com/plugins/addons.xml.md5</checksum>
+			<datadir zip="true">http://bigyidbuilds.com/plugins/</datadir>
+		</dir>
+		<dir>
+			<info compressed="false">http://multibuild.cf/mbrepo_repo/addons.xml</info>
+			<checksum>http://multibuild.cf/mbrepo_repo/addons.xml.md5</checksum>
+			<datadir zip="true">http://multibuild.cf/mbrepo_repo/</datadir>
+		</dir>
+		    <info compressed="false">http://lillywhiteyid.tk/byb/addons/addons.xml</info>
+		    <checksum>http://lillywhiteyid.tk/byb/addons/addons.xml.md5</checksum>
+		    <datadir zip="true">http://lillywhiteyid.tk/byb/addons/</datadir>
+		</dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">It not pan or cake</summary>
+		<description lang="en">Doge has his very own addon and he says very much content</description>
+		<genre></genre>
+	</extension>
+</addon>
+</addons>
