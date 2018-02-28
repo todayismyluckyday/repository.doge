@@ -56,40 +56,16 @@
   </extension>
 </addon>
 
-<addon id="repository.doge" name="Doge" version="0.0.5" provider-name="Doge">
+<addon id="repository.doge" name="Doge" version="0.0.4" provider-name="Doge">
 	<extension point="xbmc.addon.repository" name="Doge Repository">
 		<dir>
-			<info compressed="false">http://teamuniversal.xyz/modules4all/addons.xml</info>
-			<checksum>http://teamuniversal.xyz/modules4all/addons.xml.md5</checksum>
-			<datadir zip="true">http://teamuniversal.xyz/modules4all/</datadir>
-		</dir>
-		<dir>
-			<info compressed="false">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
-		</dir>
+  <info compressed="false">http://teamuniversal.xyz/modules4all/addons.xml</info>
+  <checksum>http://teamuniversal.xyz/modules4all/addons.xml.md5</checksum>
+  <datadir zip="true">http://teamuniversal.xyz/modules4all/</datadir>
+ </dir>
 		<info compressed="false">https://raw.githubusercontent.com/todayismyluckyday/repository.doge/master/zips/addons.xml</info>
 		<checksum>https://raw.githubusercontent.com/todayismyluckyday/repository.doge/master/zips/addons.xml.md5</checksum>
 		<datadir zip="true">https://raw.githubusercontent.com/todayismyluckyday/repository.doge/master/zips/</datadir>
-		</dir>
-		<dir>
-			<info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
-			<checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
-			<datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
-		</dir>
-		<dir>
-			<info compressed="false">http://bigyidbuilds.com/plugins/addons.xml</info>
-			<checksum>http://bigyidbuilds.com/plugins/addons.xml.md5</checksum>
-			<datadir zip="true">http://bigyidbuilds.com/plugins/</datadir>
-		</dir>
-		<dir>
-			<info compressed="false">http://multibuild.cf/mbrepo_repo/addons.xml</info>
-			<checksum>http://multibuild.cf/mbrepo_repo/addons.xml.md5</checksum>
-			<datadir zip="true">http://multibuild.cf/mbrepo_repo/</datadir>
-		</dir>
-		    <info compressed="false">http://lillywhiteyid.tk/byb/addons/addons.xml</info>
-		    <checksum>http://lillywhiteyid.tk/byb/addons/addons.xml.md5</checksum>
-		    <datadir zip="true">http://lillywhiteyid.tk/byb/addons/</datadir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">It not pan or cake</summary>
