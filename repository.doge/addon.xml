@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.doge" name="Doge" version="0.0.5" provider-name="Doge">
+<addon id="repository.doge" name="Doge" version="0.0.6" provider-name="Doge">
 	<extension point="xbmc.addon.repository" name="Doge Repository">
 		<dir>
                 <info compressed="false">https://raw.githubusercontent.com/teamuniversal/scrapers/master/_modules4all/zips/addons.xml</info>
